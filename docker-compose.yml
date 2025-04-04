@@ -1,0 +1,76 @@
+version: '3.8'
+services:
+
+  rabbitmq:
+    build:
+      context: .
+      dockerfile: docker/rabbitmq.Dockerfile
+    environment:
+      - RABBITMQ_DEFAULT_USER=telephony_mq
+      - RABBITMQ_DEFAULT_PASS=strong_mq_password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - telephony_network
+  postgres:
+    build:
+      context: .
+      dockerfile: docker/postgresql.Dockerfile
+    environment:
+      - POSTGRES_USER=telephony_user
+      - POSTGRES_PASSWORD=strong_password
+      - POSTGRES_DB=telephony_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - telephony_network
+  microservices:
+    build:
+      context: .
+      dockerfile: docker/app.Dockerfile
+    command: npm run start:dev
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+      - "3003:3003"
+    depends_on:
+      - postgres
+      - rabbitmq
+      - asterisk
+    environment:
+      - JWT_SECRET=a0423c6d-8e20-40ba-ad49-bd58428a8a54
+      - DB_USER=telephony_user
+      - DB_HOST=postgres
+      - DB_NAME=telephony_db
+      - DB_PASSWORD=strong_password
+      - DB_PORT=DB_PORT
+      - RABBITMQ_URL=amqp://test:test@rabbitmq:5672
+      - ASTERISK_HOST=asterisk
+      - ASTERISK_PORT=5038
+      - ASTERISK_USER=admin
+      - ASTERISK_PASS=ami-secret
+    networks:
+      - telephony_network
+  asterisk:
+    image: andrius/asterisk:latest
+    container_name: asterisk-pbx
+    volumes:
+      - ./asterisk-config:/etc/asterisk
+    ports:
+      - "5060:5060/udp"  # SIP
+      - "5060:5060/tcp"  # SIP
+      - "5038:5038/tcp"  # AMI
+      - "10000-10100:10000-10100/udp"  # RTP ports
+    restart: unless-stopped
+    networks:
+      - telephony_network
+volumes:
+  postgres-data:
+
+networks:
+  telephony_network:
+    driver: bridge
