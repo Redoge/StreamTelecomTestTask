@@ -12,7 +12,6 @@ export class AmiService {
         const amiPort = parseInt(process.env.ASTERISK_PORT || '5038', 10);
         const amiUser = process.env.ASTERISK_USER || 'admin';
         const amiPass = process.env.ASTERISK_PASS || 'secret';
-        console.log({amiUser, amiPass, amiHost, amiPort})
         this.ami = AsteriskManager(amiPort, amiHost, amiUser, amiPass, true);
 
         this.ami.on('connect', () => {

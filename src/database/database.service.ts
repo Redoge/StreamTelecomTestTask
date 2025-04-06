@@ -6,7 +6,7 @@ export class DatabaseService implements OnModuleInit {
     private readonly logger = new Logger(DatabaseService.name);
     pool: Pool;
     private readonly maxRetries = 30;
-    private readonly retryDelay = 2000; // мс
+    private readonly retryDelay = 2000;
 
     constructor() {
         const dbConfig = {
@@ -15,29 +15,18 @@ export class DatabaseService implements OnModuleInit {
             database: process.env.DB_NAME,
             password: process.env.DB_PASSWORD,
             port: parseInt(process.env.DB_PORT || '5432', 10),
-            // Налаштування пулу
-            max: 20, // максимальна кількість клієнтів у пулі
-            idleTimeoutMillis: 30000, // час простою клієнта перед звільненням
-            connectionTimeoutMillis: 2000, // час очікування з'єднання
+            max: 20,
+            idleTimeoutMillis: 30000,
+            connectionTimeoutMillis: 2000,
         };
-
-        console.log({
-            user: process.env.DB_USER,
-            host: process.env.DB_HOST,
-            database: process.env.DB_NAME,
-            password: process.env.DB_PASSWORD,
-            port: parseInt(process.env.DB_PORT || '5432', 10),
-        });
 
         this.pool = new Pool(dbConfig);
 
-        // Слухач помилок пулу
         this.pool.on('error', (err: Error) => {
             this.logger.error(`Несподівана помилка пулу: ${err.message}`);
         });
     }
 
-    // Реалізація інтерфейсу OnModuleInit для автоматичного підключення при запуску
     async onModuleInit() {
         await this.connectWithRetry();
     }

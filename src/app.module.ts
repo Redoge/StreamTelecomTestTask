@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
+import {MiddlewareConsumer, Module, RequestMethod} from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AmiServiceModule } from './ami-service.module';
 import { DbServiceModule } from './db-service.module';
 import { EventProcessorModule } from './event-processor.module';
 import { UserModule } from './user/user.module';
+import {LoggerMiddleware} from "./common/middlewares/logger.middleware";
 
 @Module({
     imports: [
@@ -49,4 +50,10 @@ import { UserModule } from './user/user.module';
     controllers: [],
     providers: []
 })
-export class AppModule {}
+export class AppModule {
+    configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(LoggerMiddleware)
+            .forRoutes({ path: '*', method: RequestMethod.ALL });
+    }
+}
