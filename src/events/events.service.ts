@@ -61,4 +61,23 @@ export class EventsService {
             throw err;
         }
     }
+    async getCallsByUserCallerIdAndDateRange(userCallerId: string, startDateStr?: string, endDateStr?: string) {
+        try{
+            let startDate: Date;
+            let endDate: Date;
+
+            if(startDateStr)
+                startDate = new Date(new Date(startDateStr).setHours(0, 0, 0))
+            else
+                startDate = new Date('1970-01-01T00:00:00Z')
+            if(endDateStr)
+                endDate = new Date(new Date(endDateStr).setHours(23,59,59))
+            else
+                endDate = new Date('2038-01-18T23:59:59Z')
+            return await this.eventRepository.findCallsByUserAndDateRange(userCallerId, startDate, endDate);
+        } catch (err){
+            this.logger.error(`Error fetching calls: ${err}`);
+            throw err;
+        }
+    }
 }

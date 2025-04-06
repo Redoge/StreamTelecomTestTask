@@ -56,11 +56,13 @@ export class EventRepository {
             throw err;
         }
     }
+
     async findAll(startDate: Date, endDate: Date) {
         console.log({startDate, endDate})
         try {
             const query =
-                `SELECT * FROM call_events
+                `SELECT *
+                 FROM call_events
                  WHERE timestamp BETWEEN $1 AND $2;`
 
             return await this.databaseService.executeQuery(query, [startDate, endDate]);
@@ -69,4 +71,20 @@ export class EventRepository {
             throw err;
         }
     }
+
+    async findCallsByUserAndDateRange(userCallerId: string, startDate: Date, endDate: Date) {
+        try {
+            const query = `SELECT DISTINCT ON (linked_id) *
+                           FROM call_events
+                           WHERE (caller_id = $1 OR recipient_id = $1)
+                             AND timestamp BETWEEN $2 AND $3
+                           ORDER BY linked_id, timestamp DESC;`;
+
+            return await this.databaseService.executeQuery(query, [userCallerId, startDate, endDate]);
+        } catch (err) {
+            this.logger.error(`Error fetching unique call events: ${err}`);
+            throw err;
+        }
+    }
+
 }

@@ -16,10 +16,17 @@ export class EventsController {
         const uerCallerId: string = req.user.phoneNumber;
         return this.eventsService.getEventsByDateRange(uerCallerId, startDate, endDate);
     }
+    @Get('/calls/me')
+    @UseGuards(JwtAuthGuard)
+    async getCallsByUserCallerIdAndDateRange(@Query() query: DateRangeDto, @Request() req: any) {
+        const { startDate, endDate } = query;
+        const uerCallerId: string = req.user.phoneNumber;
+        return this.eventsService.getCallsByUserCallerIdAndDateRange(uerCallerId, startDate, endDate);
+    }
 
     @Get('/')
     async getAllEvents(@Query() query: DateRangeDto) {
         const { startDate, endDate } = query;
-        return this.eventsService.getEventsByDateRange(startDate, endDate);
+        return this.eventsService.getEventsByDateRange(undefined, startDate, endDate);
     }
 }
