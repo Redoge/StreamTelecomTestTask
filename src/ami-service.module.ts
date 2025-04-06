@@ -1,4 +1,3 @@
-// ami-service/src/app.module.ts
 import { Module } from '@nestjs/common';
 import { AmiModule } from './ami/ami.module';
 import { RabbitMqModule } from './rabbitmq/rabbitmq.module';

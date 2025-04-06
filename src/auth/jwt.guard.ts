@@ -12,7 +12,7 @@ export class JwtAuthGuard implements CanActivate {
         const token = this.extractTokenFromHeader(request);
 
         if (!token) {
-            throw new UnauthorizedException('JWT токен не знайдено');
+            throw new UnauthorizedException('JWT not found!');
         }
 
         try {
@@ -20,13 +20,13 @@ export class JwtAuthGuard implements CanActivate {
             const user = await this.usersService.getByAuthToken(token);
 
             if (!user) {
-                throw new UnauthorizedException('Користувача не знайдено');
+                throw new UnauthorizedException('User not found!');
             }
 
             request.user = user;
             return true;
         } catch (error) {
-            throw new UnauthorizedException('Невалідний JWT токен');
+            throw new UnauthorizedException('Invalid JWT or user not found!');
         }
     }
 

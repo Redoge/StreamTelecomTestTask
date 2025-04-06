@@ -6,7 +6,6 @@ export class RabbitMqService{
     private channel: Channel;
     private readonly logger = new Logger(RabbitMqService.name);
 
-    // Метод для підключення до RabbitMQ
     async connect() {
         try {
             const rabbitMqUrl = process.env.RABBITMQ_URL;
@@ -27,7 +26,6 @@ export class RabbitMqService{
         }
     }
 
-    // Метод для публікації повідомлень
     async publish(queue: string, message: any) {
         try {
             if (!this.channel) {
@@ -43,7 +41,6 @@ export class RabbitMqService{
         }
     }
 
-    // Метод для споживання повідомлень
     async consume(queue: string, callback: (msg: any) => void) {
         try {
             if (!this.channel) {

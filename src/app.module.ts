@@ -1,4 +1,3 @@
-// app.module.ts
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AmiServiceModule } from './ami-service.module';
@@ -8,7 +7,6 @@ import { UserModule } from './user/user.module';
 
 @Module({
     imports: [
-        // Імпортуємо модулі мікросервісів
         AmiServiceModule,
         DbServiceModule,
         EventProcessorModule,
@@ -48,7 +46,7 @@ import { UserModule } from './user/user.module';
             },
         ]),
     ],
-    controllers: [], // Тут потрібно додати контролери для API Gateway
-    providers: [], // Тут потрібно додати провайдери для API Gateway
+    controllers: [],
+    providers: []
 })
 export class AppModule {}

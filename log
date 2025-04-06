@@ -1,0 +1,593 @@
+[3:01:21 AM] Starting compilation in watch mode...
+
+[3:01:28 AM] Found 0 errors. Watching for file changes.
+
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestFactory] Starting Nest application...
+{
+  user: 'telephony_user',
+  host: 'localhost',
+  database: 'telephony_db',
+  password: 'strong_password',
+  port: NaN
+}
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] RabbitMqModule dependencies initialized +34ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] DatabaseModule dependencies initialized +1ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] JwtModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] AuthModule dependencies initialized +1ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] DbServiceModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestFactory] Starting Nest application... +4ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] AmiServiceModule dependencies initialized +7ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] RabbitMqModule dependencies initialized +0ms
+{
+  amiUser: 'admin',
+  amiPass: 'ami-secret',
+  amiHost: 'localhost',
+  amiPort: 5038
+}
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +22ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] AmiModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestFactory] Starting Nest application... +1ms
+{
+  user: 'telephony_user',
+  host: 'localhost',
+  database: 'telephony_db',
+  password: 'strong_password',
+  port: NaN
+}
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] EventProcessorModule dependencies initialized +8ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] RabbitMqModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] DatabaseModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel is not initialized, waiting for connection...
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Connecting to RabbitMQ at amqp://test:test@localhost:5672
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +6ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] EventsModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestMicroservice] Nest microservice successfully started +22ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [AmiService] Connected to Asterisk AMI
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel is not initialized, waiting for connection...
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Connecting to RabbitMQ at amqp://test:test@localhost:5672
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel is not initialized, waiting for connection...
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Connecting to RabbitMQ at amqp://test:test@localhost:5672
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [DatabaseService] Підключення до пулу PostgreSQL успішне
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [DatabaseService] Підключення до пулу PostgreSQL успішне
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestMicroservice] Nest microservice successfully started +2ms
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [NestMicroservice] Nest microservice successfully started +0ms
+Main API Gateway is running on port 3000
+AMI Service is listening on port 3001
+DB Service is listening on port 3002
+Event Processor Service is listening on port 3003
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Successfully connected to RabbitMQ
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel created successfully
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Queue "call_events" asserted
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Started consuming from queue call_events
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Successfully connected to RabbitMQ
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Successfully connected to RabbitMQ
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel created successfully
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Channel created successfully
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Queue "call_events" asserted
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Message sent to queue call_events
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Queue "call_events" asserted
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    response: 'Success',
+    actionid: '1743724889254',
+    message: 'Authentication accepted'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [EventsService] Event processed and saved to DB
+{
+  event: {
+    event: 'FullyBooted',
+    privilege: 'system,all',
+    uptime: '19',
+    lastreload: '19',
+    status: 'Fully Booted'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:01:29 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [RabbitMqService] Message sent to queue call_events
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Processing event: undefined
+{
+  event: {
+    event: 'DeviceStateChange',
+    privilege: 'call,all',
+    device: 'SIP/1000',
+    state: 'NOT_INUSE'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Reachable'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:08:42 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:12:30 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:30 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:12:30 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:30 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:12:34 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:34 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:12:34 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:34 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:12:47 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:47 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:12:47 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:12:47 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:13:08 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:13:08 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:13:08 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:13:08 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:13:27 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:13:27 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:13:27 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:13:27 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:13 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:13 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:13 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:13 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:19 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:19 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:19 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:19 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [RabbitMqService] Message sent to queue call_events
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Unregistered',
+    cause: 'Expired'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [EventsService] Processing event: undefined
+{
+  event: {
+    event: 'DeviceStateChange',
+    privilege: 'call,all',
+    device: 'SIP/1000',
+    state: 'UNAVAILABLE'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:20 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [RabbitMqService] Message sent to queue call_events
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [EventsService] Processing event: undefined
+{
+  event: {
+    event: 'DeviceStateChange',
+    privilege: 'call,all',
+    device: 'SIP/1000',
+    state: 'NOT_INUSE'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:49 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:14:59 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:59 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:14:59 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:14:59 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [RabbitMqService] Message sent to queue call_events
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'DeviceStateChange',
+    privilege: 'call,all',
+    device: 'SIP/2000',
+    state: 'NOT_INUSE'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Processing event: undefined
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Reachable'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:15:59 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:16:12 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:12 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:16:12 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:12 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:16:16 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:16 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:16:16 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:16 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:16:19 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:19 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:16:19 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:19 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:16:47 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:47 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:16:47 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:47 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:16:49 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:49 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:16:49 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:16:49 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:17:37 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:37 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:17:37 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:37 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:38 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:17:39 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:39 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:17:45 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:18:17 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:18 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:22 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:27 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:27 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/1000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:27 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:27 AM     LOG [EventsService] Event processed and saved to DB
+[Nest] 87860  - 04/04/2025, 3:20:28 AM     LOG [AmiService] Received event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:28 AM     LOG [RabbitMqService] Message sent to queue call_events
+{
+  event: {
+    event: 'PeerStatus',
+    privilege: 'system,all',
+    channeltype: 'SIP',
+    peer: 'SIP/2000',
+    peerstatus: 'Registered',
+    address: '172.21.0.1:42146'
+  }
+}
+[Nest] 87860  - 04/04/2025, 3:20:28 AM     LOG [EventsService] Processing event: undefined
+[Nest] 87860  - 04/04/2025, 3:20:28 AM     LOG [EventsService] Event processed and saved to DB
+^C
+Process finished with exit code 130 (interrupted by signal 2:SIGINT)
+
+

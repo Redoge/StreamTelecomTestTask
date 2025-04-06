@@ -1,4 +1,3 @@
-// event-processor/src/app.module.ts
 import { Module } from '@nestjs/common';
 import { RabbitMqModule } from './rabbitmq/rabbitmq.module';
 import { EventsModule } from './events/events.module';

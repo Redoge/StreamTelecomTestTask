@@ -1,4 +1,3 @@
-// db-service/src/app.module.ts
 import { Module } from '@nestjs/common';
 import { RabbitMqModule } from './rabbitmq/rabbitmq.module';
 import { DatabaseModule } from './database/database.module';

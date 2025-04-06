@@ -36,7 +36,6 @@ export class UserRepository {
 
                 const token = this.generateJwtToken(newUser.id);
 
-                // Store token in the database without expiration (unlimited access)
                 const tokenQuery = `INSERT INTO auth_tokens (user_id, token)
                                    VALUES ($1, $2)`;
 
@@ -111,7 +110,7 @@ export class UserRepository {
         const payload = {
             sub: userId,
             iat: Math.floor(Date.now() / 1000),
-            jti: uuidv4() // Add a unique JWT ID
+            jti: uuidv4()
         };
 
         // Sign the token with our secret

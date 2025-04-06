@@ -1,5 +1,5 @@
-import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
-import { Pool, PoolClient } from 'pg';
+import {Injectable, Logger, OnModuleInit} from '@nestjs/common';
+import {Pool, PoolClient} from 'pg';
 
 @Injectable()
 export class DatabaseService implements OnModuleInit {
@@ -44,25 +44,24 @@ export class DatabaseService implements OnModuleInit {
 
     private async connectWithRetry(retries = 0): Promise<void> {
         try {
-            // Перевіряємо підключення, отримуючи тестового клієнта з пулу
             const client = await this.pool.connect();
             client.release();
-            this.logger.log('Підключення до пулу PostgreSQL успішне');
+            this.logger.log(`Successfully connected to PostgreSQL with retry attempt ${retries + 1} of ${this.maxRetries}...`);
         } catch (err) {
             if (retries < this.maxRetries) {
-                this.logger.warn(`Спроба підключення до PostgreSQL не вдалася (${retries + 1}/${this.maxRetries}): ${err.message}`);
+                this.logger.warn(`Try to connect to PostgreSQL again... (${retries + 1}/${this.maxRetries}): ${err.message}`);
 
                 await new Promise(resolve => setTimeout(resolve, this.retryDelay));
                 return this.connectWithRetry(retries + 1);
             }
 
-            this.logger.error(`Не вдалося підключитися до PostgreSQL після ${this.maxRetries} спроб`);
+            this.logger.error(`Cannot connect to PostgreSQL after ${this.maxRetries} attempts. Exiting...: ${err.message} `);
             throw err;
         }
     }
 
     async executeQuery(query: string, values: any[] = []) {
-        if(!query) {
+        if (!query) {
             this.logger.debug('Query is empty')
             return null;
         }
@@ -75,24 +74,8 @@ export class DatabaseService implements OnModuleInit {
             return res.rows;
         } catch (err) {
             this.logger.error(JSON.stringify(err))
-            this.logger.error(`Помилка виконання запиту: ${err.message}`);
+            this.logger.error(`Query execution failed with error: ${err.message}`);
             throw err;
-        } finally {
-            // Завжди повертаємо клієнта в пул
-            if (client) client.release();
-        }
-    }
-
-    async isPostgresReady(): Promise<boolean> {
-        let client: PoolClient | null = null;
-
-        try {
-            client = await this.pool.connect();
-            await client.query('SELECT 1');
-            return true;
-        } catch (error) {
-            this.logger.warn(`Підключення до PostgreSQL не готове: ${error.message}`);
-            return false;
         } finally {
             if (client) client.release();
         }

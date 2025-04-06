@@ -1,16 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
-import { AmiServiceModule } from "./ami-service.module";
-import { DbServiceModule } from "./db-service.module";
-import { EventProcessorModule } from "./event-processor.module";
-import { UserModule } from "./user/user.module";
-import { AppModule } from "./app.module"; // Потрібно створити цей модуль
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
-    // Створюємо основний HTTP-сервер (API Gateway)
     const app = await NestFactory.create(AppModule);
 
-    // Реєструємо мікросервіси як клієнти у головному додатку
     app.connectMicroservice<MicroserviceOptions>({
         transport: Transport.TCP,
         options: {
@@ -43,10 +37,8 @@ async function bootstrap() {
         },
     });
 
-    // Запускаємо мікросервіси разом з основним додатком
     await app.startAllMicroservices();
 
-    // Запускаємо HTTP-сервер
     await app.listen(process.env.PORT || 3000);
 
     console.log(`Main API Gateway is running on port ${process.env.PORT ?? 3000}`);
