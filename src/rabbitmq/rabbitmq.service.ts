@@ -30,7 +30,7 @@ export class RabbitMqService{
         try {
             if (!this.channel) {
                 this.logger.log('Channel is not initialized, waiting for connection...');
-                await this.connect(); // Чекаємо на підключення
+                await this.connect();
             }
             this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
                 persistent: true,
